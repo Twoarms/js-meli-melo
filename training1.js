@@ -18,3 +18,13 @@ let remainder = () => {
     let b = document.getElementById("deuxieme_nombre").value;
     return alert(`Le reste de la division du premier par le deuxième donne : ${a % b}`);
 }
+
+let weirdCalc = () => {
+    let pointure = document.getElementById("pointure").value;
+    let annee = document.getElementById("annee").value;
+    pointure *= 2;
+    pointure += 5;
+    pointure *= 50;
+    let result = pointure - annee + 1766;
+    return alert(result);
+}

@@ -6,9 +6,15 @@ let clickEvent = () => {
 }
 
 let multiplication = () => {
-    let a = document.getElementById("premier_nombre").value
-    let b = document.getElementById("deuxieme_nombre").value
-    a = Math.floor(a)
-    b = Math.floor(b)
-    return alert(a * b)
+    let a = document.getElementById("premier_nombre").value;
+    let b = document.getElementById("deuxieme_nombre").value;
+    a = Math.floor(a);
+    b = Math.floor(b);
+    return alert(`La multiplication des entiers donne :   ${a * b}`);
+}
+
+let remainder = () => {
+    let a = document.getElementById("premier_nombre").value;
+    let b = document.getElementById("deuxieme_nombre").value;
+    return alert(`Le reste de la division du premier par le deuxième donne : ${a % b}`);
 }

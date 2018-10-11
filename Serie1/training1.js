@@ -28,3 +28,12 @@ let weirdCalc = () => {
     let result = pointure - annee + 1766;
     return alert(result);
 }
+
+let majeur = () => {
+    let age = document.getElementById("age").value;
+    if (age >= 18) {
+        return alert("Vous êtes majeur !");
+    } else {
+        return alert("Vous êtes mineur...");
+    }
+}

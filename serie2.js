@@ -12,10 +12,19 @@ let periRectangle = () => {
     return alert(`Le périmètre du rectangle est de ${perimetre} cm`);
 }
 
-var rayon = prompt("Entrez la longueur du rayon d'un cercle en cm");
-
 let SurfaceCercle = () => {
     let surface = Math.PI * rayon ** 2;
     return alert(`L'aire du cercle est ${surface} cm²`)
 } 
     
+var a = 3
+var b = 2
+
+let triple = x => {
+    return x * 3
+}
+
+let affiche = () => {
+    alert(`${a} multiplié par 3 = ${triple(a)}`)
+    alert(`${b} multiplié par 3 = ${triple(b)}`)
+}

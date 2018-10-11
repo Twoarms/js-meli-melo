@@ -35,3 +35,19 @@ let afficheEx4 = () => {
     alert(`${tab[0]} multiplié par ${additionne(a)} est = à ${tab[0] * additionne(a)}`);
     alert(`${tab[tab.length-1]} multiplié par ${additionne(b)} est = à ${tab[tab.length-1] * additionne(b)}`);
 }
+
+let opeEnFolie = () => {
+    b = 2
+    alert(`a=b++, on assigne à 'a' la valeur de 'b' et on incrémente 'b'. Pour b = 2, on a a=${a = b++} et b=${b}`)
+}
+
+a=b++;
+a=++b;
+a=b--;
+a=--b;
+a+=b++;
+a=1; a+=++b;
+a=1; a-=b++;
+a=1; a-=++b;
+a=1; a+=b--;
+a=1; a+=--b;

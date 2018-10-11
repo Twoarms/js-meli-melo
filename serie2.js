@@ -11,3 +11,11 @@ let periRectangle = () => {
     let perimetre = (+largeur + +longueur) * 2;
     return alert(`Le périmètre du rectangle est de ${perimetre} cm`);
 }
+
+var rayon = prompt("Entrez la longueur du rayon d'un cercle en cm");
+
+let SurfaceCercle = () => {
+    let surface = Math.PI * rayon ** 2;
+    return alert(`L'aire du cercle est ${surface} cm²`)
+} 
+    

@@ -20,11 +20,18 @@ let SurfaceCercle = () => {
 var a = 3
 var b = 2
 
-let triple = x => {
-    return x * 3
-}
+var triple = x => {return x * 3}
 
-let affiche = () => {
+let afficheEx3 = () => {
     alert(`${a} multiplié par 3 = ${triple(a)}`)
     alert(`${b} multiplié par 3 = ${triple(b)}`)
+}
+
+let tab = [-2, 1, 4];
+
+let additionne = x => x += 2;
+
+let afficheEx4 = () => {
+    alert(`${tab[0]} multiplié par ${additionne(a)} est = à ${tab[0] * additionne(a)}`);
+    alert(`${tab[tab.length-1]} multiplié par ${additionne(b)} est = à ${tab[tab.length-1] * additionne(b)}`);
 }

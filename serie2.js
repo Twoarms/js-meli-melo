@@ -27,13 +27,13 @@ let afficheEx3 = () => {
     alert(`${b} multiplié par 3 = ${triple(b)}`)
 }
 
-let tab = [-2, 1, 4];
+let tabEx4 = [-2, 1, 4];
 
 let additionne = x => x += 2;
 
 let afficheEx4 = () => {
-    alert(`${tab[0]} multiplié par ${additionne(a)} est = à ${tab[0] * additionne(a)}`);
-    alert(`${tab[tab.length-1]} multiplié par ${additionne(b)} est = à ${tab[tab.length-1] * additionne(b)}`);
+    alert(`${tabEx4[tabEx4.length-tabEx4.length]} additionné à 2 est = à ${additionne(tabEx4[tabEx4.length-tabEx4.length])}`);
+    alert(`${tabEx4[tabEx4.length-1]} additionné à 2 est = à ${additionne(tabEx4[tabEx4.length-1])}`);
 }
 
 let opeEnFolie = () => {
@@ -62,4 +62,19 @@ let opeEnFolie = () => {
     b = 2;
     a = 1;
     alert(`a+=--b.Pour a = 1 et b = 2, on a a = ${a += --b} et b = ${b}`);
+}
+
+let tabEx6 = [-2, 1, 4];
+
+let soustrait = x => {
+    if (x >= 0) {
+        return x -= 2;
+    } else {
+        return "Nombre négatif !"
+    }
+}
+
+let afficheEx6 = () => {
+    alert(`2 soustrait à ${tabEx6[tabEx6.length-tabEx6.length]} est = à ${soustrait(tabEx6[tabEx6.length-tabEx6.length])}`);
+    alert(`2 soustrait à ${tabEx6[tabEx6.length-1]} est = à ${soustrait(tabEx6[tabEx6.length-1])}`);
 }

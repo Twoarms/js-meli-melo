@@ -121,3 +121,10 @@ let jourDeLaSemaine = () => {
     }
 }
 
+let testWhile = () => {
+    let testP = prompt("Veuillez entrer un mot ou une phrase contenant la lettre 'p'")
+    while (testP.indexOf("p") == -1) {
+        testP = prompt("Veuillez entrer, SVP, un mot ou une phrase QUI CONTIENT la lettre 'p'")
+    }
+    alert(`Vous avez écrit : "${testP}", merci !`)
+}

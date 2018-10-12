@@ -37,17 +37,29 @@ let afficheEx4 = () => {
 }
 
 let opeEnFolie = () => {
-    b = 2
-    alert(`a=b++, on assigne à 'a' la valeur de 'b' et on incrémente 'b'. Pour b = 2, on a a=${a = b++} et b=${b}`)
+    let b = 2;
+    alert(`a=b++, on assigne à 'a' la valeur de 'b' et on incrémente 'b'. Pour b = 2, on a a = ${a = b++} et b = ${b}`);
+    b = 2;
+    alert(`a=++b, on assigne à 'a' la valeur "'b' incrémenté". Pour b = 2, on a a = ${a = ++b} et b = ${b}`);
+    b = 2;
+    alert(`a=b--. Pour b = 2, on a a = ${a = b--} et b = ${b}`);
+    b = 2;
+    alert(`a=--b. Pour b = 2, on a a = ${a = --b} et b = ${b}`);
+    b = 2;
+    alert(`a+=b++.Pour b = 2, on a a = ${a += b++} et b = ${b}`);
+    b = 2;
+    a = 1;
+    alert(`a+=++b.Pour a = 1 et b = 2, on a a = ${a += ++b} et b = ${b}`);
+    b = 2;
+    a = 1;
+    alert(`a-=b++.Pour a = 1 et b = 2, on a a = ${a -= b++} et b = ${b}`);
+    b = 2;
+    a = 1;
+    alert(`a-=++b.Pour a = 1 et b = 2, on a a = ${a -= ++b} et b = ${b}`);
+    b = 2;
+    a = 1;
+    alert(`a+=b--.Pour a = 1 et b = 2, on a a = ${a += b--} et b = ${b}`);
+    b = 2;
+    a = 1;
+    alert(`a+=--b.Pour a = 1 et b = 2, on a a = ${a += --b} et b = ${b}`);
 }
-
-a=b++;
-a=++b;
-a=b--;
-a=--b;
-a+=b++;
-a=1; a+=++b;
-a=1; a-=b++;
-a=1; a-=++b;
-a=1; a+=b--;
-a=1; a+=--b;

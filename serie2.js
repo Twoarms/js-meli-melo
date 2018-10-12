@@ -122,9 +122,19 @@ let jourDeLaSemaine = () => {
 }
 
 let testWhile = () => {
-    let testP = prompt("Veuillez entrer un mot ou une phrase contenant la lettre 'p'")
+    let testP = prompt("Veuillez entrer un mot ou une phrase contenant la lettre 'p'");
     while (testP.indexOf("p") == -1) {
-        testP = prompt("Veuillez entrer, SVP, un mot ou une phrase QUI CONTIENT la lettre 'p'")
+        testP = prompt("Veuillez entrer, SVP, un mot ou une phrase QUI CONTIENT la lettre 'p'");
     }
-    alert(`Vous avez écrit : "${testP}", merci !`)
+    alert(`Vous avez écrit : "${testP}", merci !`);
+}
+
+let somme = () => {
+    let nombres = [];
+    alert("Vous allez devoir entrer 3 nombres, si vous le voulez bien");
+    let y = 1
+    for (let i = 0; i < 3; i++) {
+        nombres[i] = prompt(`Veuillez entrer le nombre N° ${y++}`);
+    }
+    alert(`Le résultat de la somme de ces 3 nombres est ${+nombres[0] + +nombres[1] + +nombres[2]}`);
 }

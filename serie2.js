@@ -78,3 +78,20 @@ let afficheEx6 = () => {
     alert(`2 soustrait à ${tabEx6[tabEx6.length-tabEx6.length]} est = à ${soustrait(tabEx6[tabEx6.length-tabEx6.length])}`);
     alert(`2 soustrait à ${tabEx6[tabEx6.length-1]} est = à ${soustrait(tabEx6[tabEx6.length-1])}`);
 }
+
+let faireChoix = () => {
+    let choix = prompt(`Entrez '1', '2' ou '3'`)
+    switch(+choix) {
+        case 1:
+            alert(`1. Merci !`);
+            break;
+        case 2:
+            alert(`2. Bonjour !`);
+            break;
+        case 3:
+            alert(`3. Au revoir !`);
+            break;
+        default:
+            alert(`Pardon, que voulez-vous ?`)
+    }
+}

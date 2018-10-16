@@ -1,3 +1,4 @@
+/* Exercice 1 */
 let surfaceRectangle = () => {
     let largeur = prompt("Entrez une largeur en cm");
     let longueur = prompt("Entrez une longueur en cm");
@@ -12,11 +13,13 @@ let periRectangle = () => {
     return alert(`Le périmètre du rectangle est de ${perimetre} cm`);
 }
 
+/* Exercice 2 */
 let SurfaceCercle = () => {
     let surface = Math.PI * rayon ** 2;
     return alert(`L'aire du cercle est ${surface} cm²`)
 } 
-    
+
+/* Exercice 3 */
 var a = 3
 var b = 2
 
@@ -27,6 +30,7 @@ let afficheEx3 = () => {
     alert(`${b} multiplié par 3 = ${triple(b)}`)
 }
 
+/* Exercice 4 */
 let tabEx4 = [-2, 1, 4];
 
 let additionne = x => x += 2;
@@ -36,6 +40,7 @@ let afficheEx4 = () => {
     alert(`${tabEx4[tabEx4.length-1]} additionné à 2 est = à ${additionne(tabEx4[tabEx4.length-1])}`);
 }
 
+/* Exercice 5 */
 let opeEnFolie = () => {
     let b = 2;
     alert(`a=b++, on assigne à 'a' la valeur de 'b' et on incrémente 'b'. Pour b = 2, on a a = ${a = b++} et b = ${b}`);
@@ -64,6 +69,7 @@ let opeEnFolie = () => {
     alert(`a+=--b.Pour a = 1 et b = 2, on a a = ${a += --b} et b = ${b}`);
 }
 
+/* Exercice 6 */
 let tabEx6 = [-2, 1, 4];
 
 let soustrait = x => {
@@ -79,6 +85,7 @@ let afficheEx6 = () => {
     alert(`2 soustrait à ${tabEx6[tabEx6.length-1]} est = à ${soustrait(tabEx6[tabEx6.length-1])}`);
 }
 
+/* Exercice 7 */
 let faireChoix = () => {
     let choix = prompt(`Entrez '1', '2' ou '3'`)
     switch(+choix) {
@@ -96,6 +103,7 @@ let faireChoix = () => {
     }
 }
 
+/* Exercice 8 */
 let jourDeLaSemaine = () => {
     switch (new Date().getDay()) {
         case 0:
@@ -121,6 +129,7 @@ let jourDeLaSemaine = () => {
     }
 }
 
+/* exercice 9 */
 let testWhile = () => {
     let testP = prompt("Veuillez entrer un mot ou une phrase contenant la lettre 'p'");
     while (testP.indexOf("p") == -1) {
@@ -129,6 +138,7 @@ let testWhile = () => {
     alert(`Vous avez écrit : "${testP}", merci !`);
 }
 
+/* Exercice 10 */
 let somme = () => {
     let nombres = [];
     alert("Vous allez devoir entrer 3 nombres, si vous le voulez bien");
@@ -137,4 +147,27 @@ let somme = () => {
         nombres[i] = prompt(`Veuillez entrer le nombre N° ${y++}`);
     }
     alert(`Le résultat de la somme de ces 3 nombres est ${+nombres[0] + +nombres[1] + +nombres[2]}`);
+}
+
+/* Exercice 11 */
+let isNumeric = value => {
+    return /^-{0,1}\d+$/.test(value);
+}
+
+let calculMoyenne = () => {
+    let somme = 0;
+    let i = 0;
+    let entier = prompt(`Entrez un nombre entier s'il vous plait.`);
+
+    while (!isNumeric(entier) || +entier >= 0) {
+        if (!isNumeric(entier)) {
+            entier = prompt(`Un nombre ENTIER, SVP`);       
+        } else if (+entier >= 0) {
+            somme += +entier
+            i++
+            entier = prompt(`Merci, entrez un autre nombre entier s'il vous plait.`)
+        }
+    }
+    let moyenne = somme / i;
+    alert(`L'entier négatif a déclenché le calcul de la moyenne, elle est de ${moyenne}`)
 }

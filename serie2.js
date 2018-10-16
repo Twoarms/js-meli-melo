@@ -169,15 +169,13 @@ let calculMoyenne = () => {
         }
     }
     let moyenne = somme / i;
-    alert(`L'entier négatif a déclenché le calcul de la moyenne, elle est de ${moyenne}`);
+    alert(`L'entier négatif a déclenché le calcul de la moyenne, elle est de ${moyenne} avec ${i} nombres donnés`);
 }
 
 /* Exercice 12 */ 
 let conversionTemperature = () => {
     let choix = prompt(`Entrez le numéro correspondant à votre choix :\n0. Fin du programme\n1. De Celsius vers Fahrenheit\n2. De Celsius vers Kelvin\n3. De Fahrenheit vers Celsius\n4. De Fahrenheit vers Kelvin\n5. De Kelvin vers Celsius\n6. De Kelvin vers Fahrenheit`);
 
-console.log(choix)
-console.log(+choix)
 let celcius
 let fahrenheit
 let kelvin
@@ -227,4 +225,28 @@ switch (+choix) {
         conversionTemperature();
 }
 }
+
 /* Exercice 13 */
+let calculIMC = () => {
+    let poids = prompt(`Veuillez entrer votre poids en kg s'il vous plait`);
+    let taille = prompt(`Veuillez entrer votre taille en cm s'il vous plait`);
+    let IMC = +poids / ((+taille / 100) ** 2);
+    alert(`Votre IMC est de ${IMC.toFixed(2)}`);
+    var categorie;
+    if (+IMC < 16.5) {
+        categorie = "Dénutrition/Famine";
+    } else if (+IMC < 18.5) {
+        categorie = "Maigreur";
+    } else if (+IMC < 25) {
+        categorie = "Corpulence normale";
+    } else if (+IMC < 30) {
+        categorie = "Surpoids";
+    } else if (+IMC < 35) {
+        categorie = "Obésité modérée";
+    } else if (+IMC < 40) {
+        categorie = "Obésité sévère";
+    } else {
+        categorie = "Obésité morbide";
+    }
+    alert(`Votre catégorie est ${categorie}`)
+}

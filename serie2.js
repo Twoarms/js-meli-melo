@@ -163,11 +163,68 @@ let calculMoyenne = () => {
         if (!isNumeric(entier)) {
             entier = prompt(`Un nombre ENTIER, SVP`);       
         } else if (+entier >= 0) {
-            somme += +entier
-            i++
-            entier = prompt(`Merci, entrez un autre nombre entier s'il vous plait.`)
+            somme += +entier;
+            i++;
+            entier = prompt(`Merci, entrez un autre nombre entier s'il vous plait.`);
         }
     }
     let moyenne = somme / i;
-    alert(`L'entier négatif a déclenché le calcul de la moyenne, elle est de ${moyenne}`)
+    alert(`L'entier négatif a déclenché le calcul de la moyenne, elle est de ${moyenne}`);
 }
+
+/* Exercice 12 */ 
+let conversionTemperature = () => {
+    let choix = prompt(`Entrez le numéro correspondant à votre choix :\n0. Fin du programme\n1. De Celsius vers Fahrenheit\n2. De Celsius vers Kelvin\n3. De Fahrenheit vers Celsius\n4. De Fahrenheit vers Kelvin\n5. De Kelvin vers Celsius\n6. De Kelvin vers Fahrenheit`);
+
+console.log(choix)
+console.log(+choix)
+let celcius
+let fahrenheit
+let kelvin
+
+switch (+choix) {
+    case 0:
+        alert(`Vous avez mis fin au programme`);
+        break;
+    case 1:
+        celcius = prompt(`Entrez la température en °C s'il vous plait`);
+        fahrenheit = (+celcius * 9 / 5) + 32;
+        alert(`${celcius}°C = ${fahrenheit}°F`);
+        conversionTemperature();
+        break;
+    case 2:
+        celcius = prompt(`Entrez la température en °C s'il vous plait`);
+        kelvin = +celcius + 273,15;
+        alert(`${celcius}°C = ${kelvin}K`);
+        conversionTemperature();
+        break;
+    case 3:
+        fahrenheit = prompt(`Entrez la température en °F s'il vous plait`);
+        celcius = (+fahrenheit - 32) / (9/5);
+        alert(`${fahrenheit}°F = ${celcius}°C`);
+        conversionTemperature();
+        break;
+    case 4:
+        fahrenheit = prompt(`Entrez la température en °F s'il vous plait`);
+        kelvin = ((+fahrenheit - 32) * (5/9)) + 273,15;
+        alert(`${fahrenheit}°F = ${kelvin}K`);
+        conversionTemperature();
+        break;
+    case 5:
+        kelvin = prompt(`Entrez la température en K s'il vous plait`);
+        celcius = +kelvin - 273,15;
+        alert(`${kelvin}K = ${celcius}°C`);
+        conversionTemperature();
+        break;
+    case 6:
+        kelvin = prompt(`Entrez la température en K s'il vous plait`);
+        fahrenheit = (+kelvin * 9/5) - 459,67;
+        alert(`${kelvin}K = ${fahrenheit}°F`);
+        conversionTemperature();
+        break;
+    default :
+        alert(`3rr0r`);
+        conversionTemperature();
+}
+}
+/* Exercice 13 */

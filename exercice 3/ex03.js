@@ -1,6 +1,12 @@
-const nom = document.getElementById(`nom`);
+const texte = document.getElementById('texte');
 
-nom.addEventListener(`keypress`, function(){
-    let press = nom.value;
-    alert(`${press}`);
-});
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('green')) {
+        texte.style.color = 'green';
+    } else if (event.target.classList.contains('red')) {
+        texte.style.color = 'red';
+    } else if (event.target.classList.contains('blue')) {
+        texte.style.color = 'blue';
+    }
+})
+

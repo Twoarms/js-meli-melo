@@ -1,5 +1,10 @@
-const nom = document.getElementById(`nom`);
+const texte = document.getElementById('texte');
+const aff = document.getElementById('aff');
+const mas = document.getElementById('mas');
 
-nom.addEventListener(`change`, function(){
-    alert(`Merci pour votre participation`);
+aff.addEventListener('click', function() {
+    texte.style.display = 'block';
+});
+mas.addEventListener('click', function() {
+    texte.style.display = 'none';
 });

@@ -10,6 +10,6 @@ let character = {
 
 for (let key in character) {
     console.log(key, character[key]);
-}
+};
 
 character.giveItems();
